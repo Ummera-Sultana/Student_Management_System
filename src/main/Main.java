@@ -8,7 +8,7 @@ while(true) {
     System.out.println("========================================");
     System.out.println("      Student Management System");
     System.out.println("=========================================");
-    System.out.println(" 1.Add Student\n 2.View Students \n3.Search Student \n 4.Update Students Details\n5.Delete Student\n 6.Exit");
+    System.out.println("1.Add Student\n2.View Students\n3.Search Student\n4.Update Students Details\n5.Delete Student\n6.Exit");
     System.out.print("Enter your Choice:");
     int option=ip.nextInt();
     ip.nextLine();
@@ -17,12 +17,12 @@ while(true) {
         case 1:
             System.out.print("Enter name:");
             String name = ip.nextLine();
-            System.out.print("\nEnter Age:");
+            System.out.print("Enter Age:");
             int age = ip.nextInt();
             ip.nextLine();
-            System.out.print("\nEnter Course:");
+            System.out.print("Enter Course:");
             String course = ip.nextLine();
-            System.out.print("\n Enter email:");
+            System.out.print("Enter email:");
             String email = ip.nextLine();
 
             Student stu = new Student(name, age, course, email);
@@ -46,7 +46,7 @@ while(true) {
             }
             break;
         case 3:
-            System.out.println("Select the way to search\n 1.Search Student By Id \n2.Search student By Name");
+            System.out.println("  Select the way to search\n     1.Search Student By Id\n     2.Search student By Name");
             int ops=ip.nextInt();
             ip.nextLine();
             switch(ops) {
@@ -104,12 +104,12 @@ while(true) {
             ip.nextLine();
             System.out.print("Enter name:");
             String names = ip.nextLine();
-            System.out.print("\nEnter Age:");
+            System.out.print("Enter Age:");
             int ages = ip.nextInt();
             ip.nextLine();
-            System.out.print("\nEnter Course:");
+            System.out.print("Enter Course:");
             String courses = ip.nextLine();
-            System.out.print("\n Enter email:");
+            System.out.print(" Enter email:");
             String emails = ip.nextLine();
             Student st1=new Student(ids,names,ages,courses,emails);
 
