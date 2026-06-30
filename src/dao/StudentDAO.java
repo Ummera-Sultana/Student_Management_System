@@ -6,6 +6,9 @@ import util.DBConnection;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.List;
+import java.util. ArrayList;
+import java.sql.ResultSet;
 
 public class StudentDAO {
 
@@ -30,5 +33,28 @@ public class StudentDAO {
             System.out.println("Error inserting student");
             e.printStackTrace();
         }
+
+    }
+    public List<Student>  viewStudents(){
+        List<Student> lis=new ArrayList<>();
+        String query= "SELECT * FROM students";
+        try(Connection con=DBConnection.getConnection();
+        PreparedStatement ps=con.prepareStatement(query)){
+            ResultSet rs= ps.executeQuery();
+            while(rs.next()){
+                int ids=rs.getInt("id");
+                String names= rs.getString("name");
+                int age=rs.getInt("age");
+                String course=rs.getString("course");
+                String email=rs.getString("email");
+                Student stu=new Student(ids,names,age,course,email);
+                lis.add(stu);
+            }
+
+        }catch(SQLException e){
+            System.out.println("viewstuednts Exception occurred");
+            e.printStackTrace();
+        }
+   return lis;
     }
 }

@@ -1,11 +1,11 @@
 package model;
 
 public class Student {
-    private static int id;
-    private static String name;
-    private static String email;
-   private static int age;
-    private static String course;
+    private  int id;
+    private  String name;
+    private  String email;
+   private  int age;
+    private  String course;
 
     public Student(String name, int age, String course, String email) {
         this.name = name;
@@ -13,24 +13,34 @@ public class Student {
         this.course = course;
         this.email = email;
     }
+    public Student(int id,String name, int age, String course, String email) {
+        this.id=id;
+        this.name = name;
+        this.age = age;
+        this.course = course;
+        this.email = email;
+    }
+
+    public Student() {
+    }
 
     public int getId() {
         return id;
     }
 
-    public static String getName() {
+    public  String getName() {
         return name;
     }
 
-    public static String getEmail() {
+    public  String getEmail() {
         return email;
     }
 
-    public static int getAge() {
+    public  int getAge() {
         return age;
     }
 
-    public static String getCourse() {
+    public String getCourse() {
         return course;
     }
 
