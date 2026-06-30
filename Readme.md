@@ -91,16 +91,33 @@ git clone https://github.com/Ummera-Sultana/Student_Management_System.git
 7. Run `Main.java`.
 
 ---
-#### Project Workflow
+## 🔄 Project Workflow
 
-- User
-   ↓
-- Main.java
-   ↓
-- StudentDAO
-   ↓
-- MySQL Database
----
+```text
+           User
+             │
+             ▼
+        Main.java
+             │
+             ▼
+       StudentDAO.java
+             │
+             ▼
+     DBConnection.java
+             │
+             ▼
+        MySQL Database
+```
+
+### Workflow Explanation
+
+1. The user selects an option from the menu in **Main.java**.
+2. `Main.java` collects the user input.
+3. The request is sent to **StudentDAO.java**.
+4. `StudentDAO.java` uses **DBConnection.java** to connect to the MySQL database.
+5. The SQL query is executed.
+6. The database returns the result.
+7. The result is displayed back to the user through `Main.java`.
 
 ## 📸 Features Implemented
 
