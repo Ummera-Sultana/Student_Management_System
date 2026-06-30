@@ -1,6 +1,8 @@
 # 🎓 Student Management System
 
-A console-based Student Management System developed using **Java**, **JDBC**, and **MySQL**. This project demonstrates CRUD (Create, Read, Update, Delete) operations with a MySQL database using JDBC.
+A **console-based backend application** developed using **Java, JDBC, and MySQL**. It demonstrates CRUD (Create, Read, Update, Delete) operations and follows a layered architecture using Model, DAO, and Utility classes.
+
+> **Note:** This project focuses on the backend only. It does not include a graphical user interface or web frontend.
 
 ---
 
