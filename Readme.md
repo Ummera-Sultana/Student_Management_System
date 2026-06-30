@@ -91,6 +91,16 @@ git clone https://github.com/Ummera-Sultana/Student_Management_System.git
 7. Run `Main.java`.
 
 ---
+#### Project Workflow
+
+User
+   ↓
+Main.java
+   ↓
+StudentDAO
+   ↓
+MySQL Database
+---
 
 ## 📸 Features Implemented
 
