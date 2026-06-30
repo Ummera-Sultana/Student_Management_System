@@ -1,13 +1,38 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import model.Student;
+ import dao.StudentDAO;
+import java.util.Scanner;
 void main() {
-  //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-  // to see how IntelliJ IDEA suggests fixing it.
-  IO.println(String.format("Hello and welcome!"));
+    Scanner ip=new Scanner(System.in);
+    System.out.println("-----Student Management System-----");
+    System.out.println("1.Add Student \n 2.Exit");
+    System.out.print("Enter your Choice:");
+    int option=ip.nextInt();
+    ip.nextLine();
+while(option==2) {
+    switch (option) {
+        case 1:
+            System.out.print("Enter name:");
+            String name = ip.nextLine();
+            System.out.print("\nEnter Age:");
+            int age = ip.nextInt();
+            ip.nextLine();
+            System.out.print("\nEnter Course:");
+            String course = ip.nextLine();
+            System.out.print("\n Enter email:");
+            String email = ip.nextLine();
 
-  for (int i = 1; i <= 5; i++) {
-    //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-    // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-    IO.println("i = " + i);
-  }
+            Student stu = new Student(name, age, course, email);
+            StudentDAO dao = new StudentDAO();
+            dao.addStudent(stu);
+            break;
+
+        case 2:
+            System.out.println("THANK YOU ");
+            return;
+    }
 }
+
+
+
+ }
+
