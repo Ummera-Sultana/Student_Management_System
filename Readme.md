@@ -1,36 +1,130 @@
-# Student Management System
+# 🎓 Student Management System
 
-A console-based Student Management System built using Java, JDBC, and MySQL.
+A console-based Student Management System developed using **Java**, **JDBC**, and **MySQL**. This project demonstrates CRUD (Create, Read, Update, Delete) operations with a MySQL database using JDBC.
 
-## Features
+---
+
+## 🚀 Features
 
 - ✅ Add Student
 - ✅ View All Students
-- 🚧 Search Student by ID (In Progress)
-- 🚧 Update Student (Planned)
-- 🚧 Delete Student (Planned)
+- ✅ Search Student by ID
+- ✅ Search Student by Name
+- ✅ Update Student Details
+- ✅ Delete Student
+- ✅ Menu-driven Console Application
 
-## Technologies Used
+---
+
+## 🛠️ Technologies Used
 
 - Java
-- JDBC
+- JDBC (Java Database Connectivity)
 - MySQL
 - IntelliJ IDEA
 - Git & GitHub
 
-## How to Run
+---
+
+## 📂 Project Structure
+
+```
+StudentManagementSystem
+│
+├── src
+│   ├── dao
+│   │   └── StudentDAO.java
+│   │
+│   ├── model
+│   │   └── Student.java
+│   │
+│   ├── util
+│   │   └── DBConnection.java
+│   │
+│   └── Main.java
+│
+├── README.md
+```
+
+---
+
+## 📋 Database Schema
+
+Database Name:
+
+```sql
+studentdb
+```
+
+Table:
+
+```sql
+CREATE TABLE students (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100),
+    age INT,
+    course VARCHAR(100),
+    email VARCHAR(100)
+);
+```
+
+---
+
+## ⚙️ How to Run
 
 1. Clone the repository.
-2. Create a MySQL database named `studentdb`.
-3. Create the `students` table.
-4. Update the database credentials in `DBConnection.java`.
-5. Add the MySQL Connector JAR to the project.
-6. Run `Main.java`.
 
-## Project Status
+```
+git clone https://github.com/Ummera-Sultana/Student_Management_System.git
+```
 
-🚧 This project is under active development. New features are being added regularly.
+2. Open the project in IntelliJ IDEA.
 
-## Author
+3. Create the MySQL database.
 
-Ummera Sultana
+4. Create the `students` table using the SQL above.
+
+5. Update your database URL, username, and password in `DBConnection.java`.
+
+6. Add the MySQL Connector JAR to the project.
+
+7. Run `Main.java`.
+
+---
+
+## 📸 Features Implemented
+
+- Create Student
+- Read Student Details
+- Search Student by ID
+- Search Student by Name
+- Update Student
+- Delete Student
+
+---
+
+## 🎯 Future Improvements
+
+- Input Validation
+- Exception Logging
+- Better Console UI
+- Maven Support
+- Spring Boot Version
+- REST API
+- GUI Version (JavaFX/Swing)
+
+---
+
+## 👩‍💻 Author
+
+**Ummera Sultana**
+
+Computer Science & Engineering Student
+
+GitHub: https://github.com/Ummera-Sultana
+
+---
+
+## ⭐ If you like this project
+
+Give this repository a ⭐ on GitHub.
